@@ -1,0 +1,347 @@
+/* general document */
+* {
+ box-sizing: border-box;
+}
+
+body {
+ background-color: #E0E0E0;
+ color: black;
+ margin: 0;
+ padding: 0;
+ clear: both;
+ text-align: left;
+ font-family: sans-serif, arial;
+}
+
+#wrapper {
+ background-color: #E0E0E0;
+ width: 100%;
+ height: 100%;
+ margin: 0 auto;
+ position: relative;
+}
+
+/* header and navigation */
+header.primary {
+ background-color: #FF5722;
+ color: white;
+ box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.26);
+ width: 100%;
+ height: 70px;
+ margin: 0 auto;
+ padding: 10px 30px;
+ position: fixed;
+ top: 0;
+ left: 0;
+ text-align: left;
+ line-height: 50%;
+ vertical-align: middle;
+ z-index: 100;
+ -webkit-user-select: none;
+ -ms-user-select: none;
+ -moz-user-select: none;
+ -o-user-select: none;
+ user-select: none;
+}
+
+header.primary h2 {
+ margin-left: 30px;
+ float: left;
+ display: inline-block;
+ cursor: pointer;
+ font-weight: normal;
+}
+
+header.primary nav {
+ margin-top: 10px;
+ float: left;
+}
+
+a {
+ color: inherit;
+ text-decoration: none;
+ cursor: pointer;
+}
+
+.menuIcon {
+ margin-top: 5px;
+ display: block;
+ text-align: center;
+}
+
+.menuIcon div {
+ background-color: white;
+ width: 30px;
+ height: 3px;
+ margin-top: 5px;
+ display: block;
+ -webkit-transition: 0.5s;
+ -ms-transition: 0.5s;
+ -moz-transition: 0.5s;
+ -o-transition: 0.5s;
+ transition: 0.5s;
+}
+
+.menuIcon:hover .menuIconDiv, .menuIcon.active .menuIconDiv {
+ background-color: #FFCCBC;
+}
+
+#navigationButtons {
+ background-color: #FF7043;
+ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.26), inset 0px 5px 5px rgba(0, 0, 0, 0.26);
+ width: 270px;
+ height: 10000px;
+ list-style: none;
+ padding: 10px 30px 10px 10px; 
+ overflow: hidden;
+ position: absolute;
+ left: -80%;
+ z-index: -1;
+ -webkit-transition: left 1s;
+ -ms-transition: left 1s;
+ -moz-transition: left 1s;
+ -o-transition: left 1s;
+ transition: left 1s;
+}
+
+#navigationButtons li a {
+ color: white;
+ opacity: 0.7;
+ margin-left: 10px;
+ display: block;
+ text-align: left;
+ padding: 15px;
+ font-size: 30px;
+ cursor: pointer;
+ -webkit-transition: opacity 1s;
+ -ms-transition: opacity 1s;
+ -moz-transition: opacity 1s;
+ -o-transition: opacity 1s;
+ transition: opacity 1s;
+}
+
+header.primary nav:hover #navigationButtons {
+ /*left: 0%;*/
+}
+
+#navigationButtons li a:hover:not(.active) {
+ opacity: 1;
+}
+
+#navigationButtons li a.active {
+ opacity: 1;
+}
+
+/* document content */
+main.primary {
+ width: 100%;
+ margin: 0 auto;
+ text-align: center;
+}
+
+.button {
+ background-color: #FF8A65;
+ color: #FBE9E7;
+ padding: 5px;
+ font-size: 22px;
+ text-align: center;
+ cursor: pointer;
+ -webkit-transition: background-color 1s, color 1s;
+ -ms-transition: background-color 1s, color 1s;
+ -moz-transition: background-color 1s, color 1s;
+ -o-transition: background-color 1s, color 1s;
+ transition: background-color 1s, color 1s;
+}
+
+.button:hover, .button.active {
+ background-color: #FF3D00;
+ color: white;
+}
+
+.pageContentWrapper {
+ width: 100%;
+ margin: auto;
+ padding: 100px 10px 10px 10px;
+}
+
+.pageContentWrapper section.main {
+ color: black;
+ width: 90%;
+ margin: auto;
+}
+
+.pageContentWrapper article {
+ display: block;
+ text-align: center;
+}
+
+.pageContentWrapper article div.content {
+ text-align: left;
+}
+
+.pageContentWrapper article span.heading {
+ display: block;
+ font-size: 25px;
+ font-weight: bold;
+}
+
+.pageContentWrapper article span.subheading {
+ display: block;
+ font-size: 20px;
+ font-weight: bold;
+}
+
+.redirectButton {
+ background-color: #FB8C00;
+ color: #FBE9E7;
+ padding: 10px 20px;
+ border-radius: 5px;
+ -webkit-transition: background-color 1s, color 1s;
+ -ms-transition: background-color 1s, color 1s;
+ -moz-transition: background-color 1s, color 1s;
+ -o-transition: background-color 1s, color 1s;
+ transition: background-color 1s, color 1s;
+}
+
+.redirectButton:hover {
+ background-color: #FFA726;
+ color: white;
+}
+
+.pageContentWrapper article div.content p {
+ font-size: 20px;    
+}
+
+hr {
+ width: 100%;
+ height: 2px;
+ border-width: 0;
+}
+
+.pageContentWrapper article hr {
+ background-color: #CFD8DC;
+}
+
+.links a {
+ -webkit-transition: color 0.5s;
+ -ms-transition: color 0.5s;
+ -moz-transition: color 0.5s;
+ -o-transition: color 0.5s;
+ transition: color 0.5s;
+}
+
+span.links a.icon {
+ margin: 5px;
+}
+
+/* home page */
+#homeContentWrapper {
+
+}
+
+#homeContentWrapper section.main {
+ width: 100%;
+}
+
+#homeContentWrapper article {
+ width: 100%;
+ padding: 100px 20px;
+}
+
+#homeContentWrapper .heading {
+ font-size: 60px;
+ font-weight: 900;
+}
+
+#homeContentWrapper .subheading {
+ font-size: 40px;
+}
+
+#homeContentWrapper article:nth-child(2) {
+ background-color: white;
+}
+
+#homeContentWrapper article:nth-child(3) {
+ background: url("https://s31.postimg.org/v1cyp47qz/Website_of_HTML5_Code_Picture.png") no-repeat;
+ background-size: cover;
+ color: white;
+}
+
+/* main page, external links page, about page */
+#mainPageContentWrapper, #externalLinksContentWrapper, #aboutUsContentWrapper {
+ padding: 70px 5%;
+}
+
+#mainPageContentWrapper section.main, #externalLinksContentWrapper section.main {
+ width: 60%;
+ float: left;
+}
+
+#aboutUsContentWrapper section.main {
+ width: 100%;
+ float: left;
+}
+
+#mainPageContentWrapper article, #externalLinksContentWrapper article, #aboutUsContentWrapper article {
+ background-color: white;
+ padding: 20px;
+}
+
+#mainPageContentWrapper article header, #externalLinksContentWrapper article header, #aboutUsContentWrapper article header {
+ text-align: left;
+}
+
+#mainPageContentWrapper article footer, #externalLinksContentWrapper article footer, #aboutUsContentWrapper article footer {
+ text-align: left;
+ font-size: 15px;
+}
+
+#mainPageContentWrapper .links a, #externalLinksContentWrapper .links a, #aboutUsContentWrapper .links a {
+ font-size: 20px;
+ color: blue;
+}
+
+#mainPageContentWrapper .links a:hover, #externalLinksContentWrapper .links a:hover, #aboutUsContentWrapper .links a:hover {
+ color: purple;
+}
+
+#mainPageContentWrapper aside, #externalLinksContentWrapper aside {
+ width: 35%;
+ float: right;
+}
+
+/* footer */
+footer.primary {
+ background-color: #FF3D00;
+ color: white;
+ width: 100%;
+ margin-top: 50px;
+ padding: 10px;
+ float: left;
+ clear: both;
+ text-align: center;
+}
+
+footer.primary span.heading {
+ font-size: 25px;
+ display: block;
+ margin-bottom: 5px;
+}
+
+footer.primary span.links {
+ display: inline-block;
+ position: relative;
+ margin: 5px;
+}
+
+footer.primary span.links a {
+ color: #FBE9E7;
+}
+
+footer.primary span.links a:hover {
+ color: white;
+}
+
+footer.primary hr {
+ background-color: #FF7043;
+}
